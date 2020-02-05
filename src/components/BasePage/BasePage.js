@@ -13,7 +13,7 @@ class Basepage extends React.Component {
         super(props);
         this.state = {
             selectedTab: 'list',
-            selectedWidgetId: null,
+            selectedWidgetId: '',
             showSingleModal: false
         };
         this.onTabSelect = this.onTabSelect.bind(this);
@@ -53,7 +53,7 @@ class Basepage extends React.Component {
                     >
                         <Tab label="List" value="list" />
                         <Tab label="Graph" value="graph" />
-                        <Tab value="singleView" />
+                        <Tab label={this.state.selectedWidgetId} value="singleView" />
                     </Tabs>
                 </AppBar>
                 {this.state.selectedTab === 'list' && (

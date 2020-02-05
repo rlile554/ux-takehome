@@ -1,7 +1,5 @@
 # Running the Project
 
-### `cd ux-takehome`
-
 ### `npm intall`
 
 ### `npm start`
