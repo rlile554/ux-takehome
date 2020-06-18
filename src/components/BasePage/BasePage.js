@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 
 import ListView from '../ListView/ListView';
 import SingleView from '../SingleView/SingleView';
@@ -21,6 +21,9 @@ const Basepage = () => {
 		<BrowserRouter>
 			<Header />
 			<Switch>
+				<Route exact path="/" 
+					render={() => <Redirect to="/list" />}
+				/>
 				<Route exact path="/list">
 					<ListView
 						widgetData={Data}
